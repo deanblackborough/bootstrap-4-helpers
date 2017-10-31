@@ -1,0 +1,31 @@
+{
+    "name": "deanblackborough/bootstrap-4-helpers",
+    "description": "Standalone Bootstrap 4 view helpers to use outside of Zend Framework apps",
+    "autoload": {
+        "psr-4": {
+            "DBlackborough\\Bootstrap4Helpers\\": "src/"
+        }
+    },
+    "homepage": "https://github.com/deanblackborough/bootstrap-4-helpers",
+    "keywords": ["bootstrap", "bootstrap-4", "helper", "component" ],
+    "authors": [
+        {
+            "name": "Dean Blackborough",
+            "email": "dean@g3d-development.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "zendframework/zend-view": "^2.9",
+        "deanblackborough/zf3-view-helpers": "^1"
+    },
+    "require-dev": {
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/deanblackborough/bootstrap-4-helpers"
+        }
+    ],
+    "license": "MIT"
+}
