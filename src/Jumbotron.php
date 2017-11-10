@@ -15,7 +15,14 @@ class Jumbotron
     /**
      * @var Bootstrap4Jumbotron
      */
-    static $helper;
+    private $helper;
+
+    public function __construct()
+    {
+        $this->helper = new Bootstrap4Jumbotron();
+
+        return $this;
+    }
 
     /**
      * Opening call for view helper, the minimum parameters required to create component
@@ -23,21 +30,35 @@ class Jumbotron
      * @param string $heading
      * @param string $content
      *
-     * @return void
+     * @return Jumbotron
      */
-    static public function helper(string $heading, string $content)
+    public function helper(string $heading, string $content) : Jumbotron
     {
-        self::$helper = new Bootstrap4Jumbotron();
-        self::$helper->__invoke($heading, $content);
+        $this->helper->__invoke($heading, $content);
+
+        return $this;
     }
+
+    /**
+     * Add the fluid class to make Jumbotron full width and without rounded corners
+     *
+     * @return Jumbotron
+     */
+    public function fluid() : Jumbotron
+    {
+        $this->helper->fluid();
+
+        return $this;
+    }
+
 
     /**
      * Return the generated HTML
      *
      * @return string
      */
-    public static function render() : string
+    public function render() : string
     {
-        return self::$helper;
+        return $this->helper;
     }
 }
