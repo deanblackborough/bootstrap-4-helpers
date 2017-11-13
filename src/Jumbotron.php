@@ -51,14 +51,82 @@ class Jumbotron
         return $this;
     }
 
+    /**
+     * Set the background colour for the component, needs to be one of the following, primary, secondary, success,
+     * danger, warning, info, light, dark or white, if an incorrect style is passed in we don't apply the class.
+     *
+     * @param string $color
+     *
+     * @return Jumbotron
+     */
+    public function setBgStyle($color) : Jumbotron
+    {
+        $this->helper->setBgStyle($color);
+
+        return $this;
+    }
+
+    /**
+     * Set the display level class for a heading title, display-[1-4]
+     *
+     * @param integer $level [1-4]
+     *
+     * @return Jumbotron
+     */
+    public function setHeadingDisplayLevel(int $level) : Jumbotron
+    {
+        $this->helper->setHeadingDisplayLevel($level);
+
+        return $this;
+    }
+
+    /**
+     * Set an optional sub heading, added to the end of the heading inside small tags
+     *
+     * @param string $sub_heading
+     *
+     * @return Jumbotron
+     */
+    public function setSubHeading(string $sub_heading) : Jumbotron
+    {
+        $this->helper->setSubHeading($sub_heading);
+
+        return $this;
+    }
+
+    /**
+     * Set the text color for the component, need to be one of the following, primary, secondary, success, danger,
+     * warning, info, light or dark, if an incorrect style is passed in we don't apply the class.
+     *
+     * @param string $color
+     *
+     * @return Jumbotron
+     */
+    public function setTextStyle($color) : Jumbotron
+    {
+        $this->helper->setTextStyle($color);
+
+        return $this;
+    }
 
     /**
      * Return the generated HTML
      *
      * @return string
      */
-    public function render() : string
+    protected function render() : string
     {
         return $this->helper;
+    }
+
+
+    /**
+     * Override __toString() so we can echo the view object directly
+     *
+     * @return string
+     */
+    public function __toString() : string
+    {
+        return $this->render();
     }
 }
