@@ -59,7 +59,7 @@ class Jumbotron
      *
      * @return Jumbotron
      */
-    public function setBgStyle($color) : Jumbotron
+    public function setBgStyle(string $color) : Jumbotron
     {
         $this->helper->setBgStyle($color);
 
@@ -102,7 +102,7 @@ class Jumbotron
      *
      * @return Jumbotron
      */
-    public function setTextStyle($color) : Jumbotron
+    public function setTextStyle(string $color) : Jumbotron
     {
         $this->helper->setTextStyle($color);
 

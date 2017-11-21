@@ -12,3 +12,32 @@ not just Zend Framework apps.
 
 The easiest way to use the view helpers is via composer, `composer require deanblackborough/bootstrap-4-helpers`, 
 alternatively include the classes in `src/` in your library.
+
+## Usage
+
+Create a view helper is a two step process, you need to call the ViewHelper factory to create the relevant 
+view helper and then you can chain the helpers methods to create your component.
+
+```
+$jumbotron = ViewHelper::jumbotron('Heading', '<p>Content</p>');
+echo $jumbotron->fluid()->setBgStyle('primary');
+``` 
+
+# The view helpers
+
+## Jumbotron 
+
+### Factory call
+
+```
+$jumbotron = ViewHelper::jumbotron('Heading', '<p>Content</p>');
+```
+
+### Methods, can be chained
+
+* ```fluid()``` 
+* ```setBgStyle(string $color)```
+* ```setHeadingDisplayLevel(int $level)```
+* ```setSubHeading(string $sub_heading)```
+* ```setTextStyle(string $color)```
+
