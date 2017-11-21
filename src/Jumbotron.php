@@ -25,7 +25,10 @@ class Jumbotron
     }
 
     /**
-     * Opening call for view helper, the minimum parameters required to create component
+     * Instantiate the view helper
+     *
+     * Opening call for view helper, instantiates the view helper with the minimum parameters required a usable
+     * component
      *
      * @param string $heading
      * @param string $content
@@ -40,7 +43,9 @@ class Jumbotron
     }
 
     /**
-     * Add the fluid class to make Jumbotron full width and without rounded corners
+     * Add fluid class
+     *
+     * Assign the fluid class to the Jumbotron to make the Jumbotron full width and without rounded corners
      *
      * @return Jumbotron
      */
@@ -52,8 +57,11 @@ class Jumbotron
     }
 
     /**
-     * Set the background colour for the component, needs to be one of the following, primary, secondary, success,
-     * danger, warning, info, light, dark or white, if an incorrect style is passed in we don't apply the class.
+     * Set the background colour
+     *
+     * Assign the background color class to use for the component, the class needs to be one of the following,
+     * primary, secondary, success, danger, warning, info, light, dark or white, if an incorrect colour string
+     * is passed in we don't apply the class.
      *
      * @param string $color
      *
@@ -67,7 +75,10 @@ class Jumbotron
     }
 
     /**
-     * Set the display level class for a heading title, display-[1-4]
+     * Set the display level
+     *
+     * Set the display level class to use for the heading title, a value between 1 and 4, generates the class
+     * display-[1-4]
      *
      * @param integer $level [1-4]
      *
@@ -81,7 +92,9 @@ class Jumbotron
     }
 
     /**
-     * Set an optional sub heading, added to the end of the heading inside small tags
+     * Set an optional sub heading
+     *
+     * Assign an optional sub heading, the heading will be appended to the heading and placed within small tags
      *
      * @param string $sub_heading
      *
@@ -95,8 +108,11 @@ class Jumbotron
     }
 
     /**
-     * Set the text color for the component, need to be one of the following, primary, secondary, success, danger,
-     * warning, info, light or dark, if an incorrect style is passed in we don't apply the class.
+     * Set the text colour
+     *
+     * Assign the text color class to use for the the component, the class needs to be one of the following,
+     * primary, secondary, success, danger, warning, info, light or dark, if an incorrect colour string is passed
+     * in we don't apply the class.
      *
      * @param string $color
      *

@@ -35,9 +35,15 @@ $jumbotron = ViewHelper::jumbotron('Heading', '<p>Content</p>');
 
 ### Methods, can be chained
 
-* ```fluid()``` 
-* ```setBgStyle(string $color)```
-* ```setHeadingDisplayLevel(int $level)```
-* ```setSubHeading(string $sub_heading)```
-* ```setTextStyle(string $color)```
+* ```fluid()``` - Add fluid class
+* ```setBgStyle(string $color)``` - Set the background colour
+* ```setHeadingDisplayLevel(int $level)``` - Set the display level
+* ```setSubHeading(string $sub_heading)``` - Set an optional sub heading
+* ```setTextStyle(string $color)``` - Set the text colour
+
+# No tests?
+
+I'm not adding tests to this library, the tests for the functionality are within the 
+https://github.com/deanblackborough/zf3-view-helpers library, this library simply makes it possible to use 
+the view helpers outside of the Zend Framework, I've not added any additional functionality.
 
