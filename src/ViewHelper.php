@@ -11,10 +11,23 @@
 class ViewHelper
 {
     /**
+     * Instantiate and return the Bootstrap 4 Badge view helper
+     *
+     * @param string $label Label for the badge
+     *
+     * @return Badge
+     */
+    public static function badge(string $label) : Badge
+    {
+        $helper = new Badge();
+        return $helper->helper($label);
+    }
+
+    /**
      * Instantiate and return the Bootstrap 4 Jumbotron view helper
      *
-     * @param string $heading
-     * @param string $content
+     * @param string $heading Heading text for jumbotron
+     * @param string $content Content to display within the jumbotron
      *
      * @return Jumbotron
      */
