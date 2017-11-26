@@ -25,10 +25,20 @@ class Jumbotron
     }
 
     /**
+     * Override __toString() so we can echo the view object directly
+     *
+     * @return string
+     */
+    public function __toString() : string
+    {
+        return $this->render();
+    }
+
+    /**
      * Instantiate the view helper
      *
-     * Opening call for view helper, instantiates the view helper with the minimum parameters required a usable
-     * component
+     * Opening call for view helper, instantiates the view helper with the minimum parameters required to create
+     * a usable component
      *
      * @param string $heading
      * @param string $content
@@ -133,16 +143,5 @@ class Jumbotron
     protected function render() : string
     {
         return $this->helper;
-    }
-
-
-    /**
-     * Override __toString() so we can echo the view object directly
-     *
-     * @return string
-     */
-    public function __toString() : string
-    {
-        return $this->render();
     }
 }
