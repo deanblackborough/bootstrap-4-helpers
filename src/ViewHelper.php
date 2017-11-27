@@ -24,6 +24,19 @@ class ViewHelper
     }
 
     /**
+     * Instantiate and return the Bootstrap 4 Button view helper
+     *
+     * @param string $label Label for the button
+     *
+     * @return Button
+     */
+    public static function button(string $label) : Button
+    {
+        $helper = new Button();
+        return $helper->helper($label);
+    }
+
+    /**
      * Instantiate and return the Bootstrap 4 Jumbotron view helper
      *
      * @param string $heading Heading text for jumbotron

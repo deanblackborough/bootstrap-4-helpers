@@ -25,6 +25,43 @@ echo $jumbotron->fluid()->setBgStyle('primary');
 
 # The view helpers
 
+## Badge 
+
+### Factory call
+
+```
+$badge = ViewHelper::badge('Label');
+```
+
+### Methods, can be chained
+
+* ```asLink()``` - As link
+* ```pill()``` - Display as pill
+* ```setBgStyle(string $color)``` - Set the background colour
+* ```setTextStyle(string $color)``` - Set the text colour
+
+## Button 
+
+### Factory call
+
+```
+$button = ViewHelper::button('Label');
+```
+
+### Methods, can be chained
+
+* ```active()``` - Active
+* ```block()``` - Display as a full width block
+* ```customClass(string $class)``` - Add a custom class
+* ```disabled()``` - Set disabled
+* ```large()``` - Large button
+* ```setBgStyle(string $color)``` - Set the background colour
+* ```setModeButton()``` -  Render as a button
+* ```setModeInput()``` - Render as an input
+* ```setOutlineStyle()``` - Outline button
+* ```setUri(string $uri)``` - Set URI
+* ```small()``` - Small button
+
 ## Jumbotron 
 
 ### Factory call
