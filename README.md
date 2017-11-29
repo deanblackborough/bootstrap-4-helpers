@@ -78,6 +78,24 @@ $jumbotron = ViewHelper::jumbotron('Heading', '<p>Content</p>');
 * ```setSubHeading(string $sub_heading)``` - Set an optional sub heading
 * ```setTextStyle(string $color)``` - Set the text colour
 
+## Progress bar 
+
+### Factory call
+
+```
+$jumbotron = ViewHelper::progressBar(25);
+```
+
+### Methods, can be chained
+
+* ```animate()``` - Animate
+* ```setBgStyle(string $color)``` - Set the background colour
+* ```setHeight(int $height)``` - Set height
+* ```setLabel(string $label)``` - Set a label
+* ```setTextStyle(string $color)``` - Set the text colour
+* ```striped()``` - Striped background
+
+
 # No tests?
 
 I'm not adding tests to this library, the tests for the functionality are within the 

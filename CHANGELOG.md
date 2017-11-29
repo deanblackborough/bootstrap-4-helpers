@@ -2,7 +2,7 @@
 
 Full changelog for Bootstrap 4 changelog
 
-## v0.02 - Badge, Button and Progress bar - 2017-11-xx
+## v0.02 - Badge, Button and Progress bar - 2017-11-29
 
 * Added Badge view helper.
 * Added Button view helper.
