@@ -35,6 +35,20 @@ class ProgressBar
     }
 
     /**
+     * Animate
+     *
+     * Add the class to enable animated backgrounds
+     *
+     * @return ProgressBar
+     */
+    public function animate() : ProgressBar
+    {
+        $this->helper->animate();
+
+        return $this;
+    }
+
+    /**
      * Instantiate the view helper
      *
      * Opening call for view helper, instantiates the view helper with the minimum parameters required to create
@@ -80,6 +94,38 @@ class ProgressBar
     }
 
     /**
+     * Set height
+     *
+     * Set the height for the progress bar in pixels
+     *
+     * @param integer $height
+     *
+     * @return ProgressBar
+     */
+    public function setHeight(int $height) : ProgressBar
+    {
+        $this->helper->setHeight($height);
+
+        return $this;
+    }
+
+    /**
+     * Set a label
+     *
+     * Set a label to render inside the progress bar
+     *
+     * @param string $label
+     *
+     * @return ProgressBar
+     */
+    public function setLabel(string $label) : ProgressBar
+    {
+        $this->helper->setLabel($label);
+
+        return $this;
+    }
+
+    /**
      * Set the text colour
      *
      * Assign the text color class to use for the the component, the class needs to be one of the following,
@@ -93,6 +139,20 @@ class ProgressBar
     public function setTextStyle(string $color) : ProgressBar
     {
         $this->helper->setTextStyle($color);
+
+        return $this;
+    }
+
+    /**
+     * Striped background
+     *
+     * Enable the striped style for the set progress bar background
+     *
+     * @return ProgressBar
+     */
+    public function striped() : ProgressBar
+    {
+        $this->helper->striped();
 
         return $this;
     }

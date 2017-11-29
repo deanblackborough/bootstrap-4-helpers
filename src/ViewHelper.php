@@ -49,4 +49,17 @@ class ViewHelper
         $helper = new Jumbotron();
         return $helper->helper($heading, $content);
     }
+
+    /**
+     * Instantiate and return the Bootstrap 4 Progress bar view helper
+     *
+     * @param integer $value Current progress bar value
+     *
+     * @return ProgressBar
+     */
+    public static function progressBar(int $value)
+    {
+        $helper = new ProgressBar();
+        return $helper->helper($value);
+    }
 }
