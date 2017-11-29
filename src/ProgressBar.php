@@ -1,25 +1,25 @@
 <?php
 
-use DBlackborough\Zf3ViewHelpers\Bootstrap4Jumbotron;
+use DBlackborough\Zf3ViewHelpers\Bootstrap4ProgressBar;
 
 /**
- * Generate a Bootstrap 4 Jumbotron component
+ * Generate a Bootstrap 4 Progress bar component
  *
  * @package DBlackborough\Bootstrap4Helpers
  * @author Dean Blackborough <dean@g3d-development.com>
  * @copyright Dean Blackborough
  * @license https://github.com/deanblackborough/bootstrap-4-helpers/blob/master/LICENSE
  */
-class Jumbotron
+class ProgressBar
 {
     /**
-     * @var Bootstrap4Jumbotron
+     * @var Bootstrap4ProgressBar
      */
     private $helper;
 
     public function __construct()
     {
-        $this->helper = new Bootstrap4Jumbotron();
+        $this->helper = new Bootstrap4ProgressBar();
 
         return $this;
     }
@@ -35,35 +35,44 @@ class Jumbotron
     }
 
     /**
-     * Instantiate the view helper
+     * Animate
      *
-     * Opening call for view helper, instantiates the view helper with the minimum parameters required to create
-     * a usable component
+     * Add the class to enable animated backgrounds
      *
-     * @param string $heading
-     * @param string $content
-     *
-     * @return Jumbotron
+     * @return ProgressBar
      */
-    public function helper(string $heading, string $content) : Jumbotron
+    public function animate() : ProgressBar
     {
-        $this->helper->__invoke($heading, $content);
+        $this->helper->animate();
 
         return $this;
     }
 
     /**
-     * Add fluid class
+     * Instantiate the view helper
      *
-     * Assign the fluid class to the Jumbotron to make the Jumbotron full width and without rounded corners
+     * Opening call for view helper, instantiates the view helper with the minimum parameters required to create
+     * a usable component
      *
-     * @return Jumbotron
+     * @param integer $value Current progress bar value
+     *
+     * @return ProgressBar
      */
-    public function fluid() : Jumbotron
+    public function helper(int $value) : ProgressBar
     {
-        $this->helper->fluid();
+        $this->helper->__invoke($value);
 
         return $this;
+    }
+
+    /**
+     * Return the generated HTML
+     *
+     * @return string
+     */
+    protected function render() : string
+    {
+        return $this->helper;
     }
 
     /**
@@ -75,9 +84,9 @@ class Jumbotron
      *
      * @param string $color
      *
-     * @return Jumbotron
+     * @return ProgressBar
      */
-    public function setBgStyle(string $color) : Jumbotron
+    public function setBgStyle(string $color) : ProgressBar
     {
         $this->helper->setBgStyle($color);
 
@@ -85,34 +94,33 @@ class Jumbotron
     }
 
     /**
-     * Set the display level
+     * Set height
      *
-     * Set the display level class to use for the heading title, a value between 1 and 4, generates the class
-     * display-[1-4]
+     * Set the height for the progress bar in pixels
      *
-     * @param integer $level [1-4]
+     * @param integer $height
      *
-     * @return Jumbotron
+     * @return ProgressBar
      */
-    public function setHeadingDisplayLevel(int $level) : Jumbotron
+    public function setHeight(int $height) : ProgressBar
     {
-        $this->helper->setHeadingDisplayLevel($level);
+        $this->helper->setHeight($height);
 
         return $this;
     }
 
     /**
-     * Set an optional sub heading
+     * Set a label
      *
-     * Assign an optional sub heading, the heading will be appended to the heading and placed within small tags
+     * Set a label to render inside the progress bar
      *
-     * @param string $sub_heading
+     * @param string $label
      *
-     * @return Jumbotron
+     * @return ProgressBar
      */
-    public function setSubHeading(string $sub_heading) : Jumbotron
+    public function setLabel(string $label) : ProgressBar
     {
-        $this->helper->setSubHeading($sub_heading);
+        $this->helper->setLabel($label);
 
         return $this;
     }
@@ -126,9 +134,9 @@ class Jumbotron
      *
      * @param string $color
      *
-     * @return Jumbotron
+     * @return ProgressBar
      */
-    public function setTextStyle(string $color) : Jumbotron
+    public function setTextStyle(string $color) : ProgressBar
     {
         $this->helper->setTextStyle($color);
 
@@ -136,12 +144,16 @@ class Jumbotron
     }
 
     /**
-     * Return the generated HTML
+     * Striped background
      *
-     * @return string
+     * Enable the striped style for the set progress bar background
+     *
+     * @return ProgressBar
      */
-    protected function render() : string
+    public function striped() : ProgressBar
     {
-        return $this->helper;
+        $this->helper->striped();
+
+        return $this;
     }
 }

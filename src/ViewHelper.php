@@ -11,10 +11,36 @@
 class ViewHelper
 {
     /**
+     * Instantiate and return the Bootstrap 4 Badge view helper
+     *
+     * @param string $label Label for the badge
+     *
+     * @return Badge
+     */
+    public static function badge(string $label) : Badge
+    {
+        $helper = new Badge();
+        return $helper->helper($label);
+    }
+
+    /**
+     * Instantiate and return the Bootstrap 4 Button view helper
+     *
+     * @param string $label Label for the button
+     *
+     * @return Button
+     */
+    public static function button(string $label) : Button
+    {
+        $helper = new Button();
+        return $helper->helper($label);
+    }
+
+    /**
      * Instantiate and return the Bootstrap 4 Jumbotron view helper
      *
-     * @param string $heading
-     * @param string $content
+     * @param string $heading Heading text for jumbotron
+     * @param string $content Content to display within the jumbotron
      *
      * @return Jumbotron
      */
@@ -22,5 +48,18 @@ class ViewHelper
     {
         $helper = new Jumbotron();
         return $helper->helper($heading, $content);
+    }
+
+    /**
+     * Instantiate and return the Bootstrap 4 Progress bar view helper
+     *
+     * @param integer $value Current progress bar value
+     *
+     * @return ProgressBar
+     */
+    public static function progressBar(int $value)
+    {
+        $helper = new ProgressBar();
+        return $helper->helper($value);
     }
 }
