@@ -11,6 +11,19 @@
 class ViewHelper
 {
     /**
+     * Instantiate and return the Bootstrap 4 Alert view helper
+     *
+     * @param string $message HTML content to display inside the alert
+     *
+     * @return Alert
+     */
+    public static function alert(string $message) : Alert
+    {
+        $helper = new Alert();
+        return $helper->helper($message);
+    }
+
+    /**
      * Instantiate and return the Bootstrap 4 Badge view helper
      *
      * @param string $label Label for the badge

@@ -2,6 +2,11 @@
 
 Full changelog for Bootstrap 4 changelog
 
+## v0.03 - Alert helper - 2017-11-29
+
+* Added the alert view helper.
+* Updated README and added a new example.
+
 ## v0.02 - Badge, Button and Progress bar - 2017-11-29
 
 * Added Badge view helper.
