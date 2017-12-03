@@ -25,6 +25,20 @@ echo $jumbotron->fluid()->setBgStyle('primary');
 
 # The view helpers
 
+## Alert 
+
+### Factory call
+
+```
+$alert = ViewHelper::alert('Alert message');
+```
+
+### Methods, can be chained
+
+* ```setBgStyle(string $color)``` - Set the background colour
+* ```setHeading(string $heading, int $heading_level)``` - Set optional heading
+* ```setTextStyle(string $color)``` - Set the text colour
+
 ## Badge 
 
 ### Factory call
