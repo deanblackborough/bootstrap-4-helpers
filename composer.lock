@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "aaf914d7792cfdad26740163aee2826b",
+    "content-hash": "99ea8a8841ceccc2c9fc903dd4220228",
     "packages": [
         {
             "name": "deanblackborough/zf3-view-helpers",
