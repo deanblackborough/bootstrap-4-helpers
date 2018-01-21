@@ -1,3 +1,8 @@
+[![Latest Stable Version](https://img.shields.io/packagist/v/deanblackborough/bootstrap-4-helpers.svg?style=flat-square)](https://packagist.org/packages/deanblackborough/bootstrap-4-helpers)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/deanblackborough/bootstrap-4-helpers/blob/master/LICENSE)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.0-8892BF.svg)](https://php.net/)
+[![Total Downloads](https://img.shields.io/packagist/dt/deanblackborough/bootstrap-4-helpers.svg?style=flat-square)](https://packagist.org/packages/deanblackborough/bootstrap-4-helpers)
+
 # Bootstrap 4 helpers
 
 Bootstrap 4 component helpers
@@ -76,6 +81,24 @@ $button = ViewHelper::button('Label');
 * ```setUri(string $uri)``` - Set URI
 * ```small()``` - Small button
 
+## Column 
+
+### Factory call
+
+```
+$column = ViewHelper::column('<p>Content</p>');
+```
+
+### Methods, can be chained
+
+* ```lg(int $size)``` - Set lg column width
+* ```md(int $size)``` - Set md column width
+* ```setBgStyle(string $color)``` - Set the background colour
+* ```setTextStyle(string $color)``` - Set the text colour
+* ```sm(int $size)``` - Set sm column width
+* ```xl(int $size)``` - Set xl column width
+* ```xs(int $size)``` - Set xs column width
+
 ## Jumbotron 
 
 ### Factory call
@@ -97,7 +120,7 @@ $jumbotron = ViewHelper::jumbotron('Heading', '<p>Content</p>');
 ### Factory call
 
 ```
-$jumbotron = ViewHelper::progressBar(25);
+$progressBar = ViewHelper::progressBar(25);
 ```
 
 ### Methods, can be chained
@@ -109,6 +132,18 @@ $jumbotron = ViewHelper::progressBar(25);
 * ```setTextStyle(string $color)``` - Set the text colour
 * ```striped()``` - Striped background
 
+## Row 
+
+### Factory call
+
+```
+$row = ViewHelper::row('<div class="col-6"></div>');
+```
+
+### Methods, can be chained
+
+* ```setBgStyle(string $color)``` - Set the background colour
+* ```setTextStyle(string $color)``` - Set the text colour
 
 # No tests?
 
