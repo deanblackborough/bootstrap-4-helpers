@@ -5,6 +5,7 @@ Full changelog for Bootstrap 4 changelog
 ## v0.04 - Row and Column helpers - 2018-01-21
 
 * Added row view helper.
+* Added column view helper.
 * Updated requirements, zend-view now 2.10.
 
 ## v0.03 - Alert helper - 2017-11-29

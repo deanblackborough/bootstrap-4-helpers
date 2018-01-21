@@ -50,6 +50,19 @@ class ViewHelper
     }
 
     /**
+     * Instantiate and return the Bootstrap 4 Column view helper
+     *
+     * @param string $content Column content
+     *
+     * @return Column
+     */
+    public static function column(string $content) : Column
+    {
+        $helper = new Column();
+        return $helper->helper($content);
+    }
+
+    /**
      * Instantiate and return the Bootstrap 4 Jumbotron view helper
      *
      * @param string $heading Heading text for jumbotron
@@ -74,5 +87,18 @@ class ViewHelper
     {
         $helper = new ProgressBar();
         return $helper->helper($value);
+    }
+
+    /**
+     * Instantiate and return the Bootstrap 4 Row view helper
+     *
+     * @param string $content Row content
+     *
+     * @return Row
+     */
+    public static function row(string $content) : Row
+    {
+        $helper = new Row();
+        return $helper->helper($content);
     }
 }

@@ -81,6 +81,24 @@ $button = ViewHelper::button('Label');
 * ```setUri(string $uri)``` - Set URI
 * ```small()``` - Small button
 
+## Column 
+
+### Factory call
+
+```
+$column = ViewHelper::column('<p>Content</p>');
+```
+
+### Methods, can be chained
+
+* ```lg(int $size)``` - Set lg column width
+* ```md(int $size)``` - Set md column width
+* ```setBgStyle(string $color)``` - Set the background colour
+* ```setTextStyle(string $color)``` - Set the text colour
+* ```sm(int $size)``` - Set sm column width
+* ```xl(int $size)``` - Set xl column width
+* ```xs(int $size)``` - Set xs column width
+
 ## Jumbotron 
 
 ### Factory call
